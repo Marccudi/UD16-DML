@@ -99,6 +99,7 @@ update empleados set DEPARTAMENTO = 14 where DEPARTAMENTO = 17;
 delete from empleados where DEPARTAMENTO = 14;
 
 -- 19. Despedir a todos los empleados que trabajen para departamentos cuyo presupuesto sea superior  a los 60000 eur.
+delete empl from empleados as empl inner join departamentos where empl.DEPARTAMENTO = departamentos.CODIGO and departamentos.PRESUPUESTO > 60000;
 
 -- 20. Despedir a todos los empleados.
 delete from empleados;
